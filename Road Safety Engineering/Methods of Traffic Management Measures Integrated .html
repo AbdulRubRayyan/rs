@@ -1,0 +1,566 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Methods of Traffic Management Measures, Integrated Safety Improvement and Traffic Calming Schemes</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ff154fd1-b2cd-403d-8915-3372728b9601" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🚔</span></div><h1 class="page-title">Methods of Traffic Management Measures, Integrated Safety Improvement and Traffic Calming Schemes</h1></header><div class="page-body"><p id="ee7c4c02-705b-4f19-99c7-fdaa6ea09a9e" class="">
+</p><h1 id="5d35e899-08fe-4c02-96db-04a3dba54deb" class="">Traffic Management Measures</h1><blockquote id="5802a733-8915-43b2-9589-7228b0b4cc96" class="">SAFETY + SMOOTH MOVEMENT OF TRAFFIC</blockquote><h3 id="3d41cf98-856f-4750-a568-381afbeb0496" class="">Restrictions of Turning Movement</h3><p id="fb028673-fe8f-4748-95c0-8a218cb926a4" class="">At a junction, the turning traffic includes left-turners and right-turners. Left-turning traffic does not usually obstruct traffic flows through the junctions, but right-turning traffic can cause serious loss of capacity. At times, right-turning traffic can lock the flow and bring the entire flow to a halt. One way of dealing with heavy right-turning traffic is to incorporate a separate right-turning phase in the signal scheme, or to introduce an early cut-off or late start arrangement. These schemes have their limitations and result in a long signal cycle. Another solution is to ban the turning movement altogether.</p><h3 id="1c7c2bee-dbe3-4631-a5ed-a45a54c5b79b" class="">One way streets</h3><p id="0095d979-a33a-49e9-977c-979a58b9c491" class="">A one way street only allows vehicles to move in one direction down the road. ‘No-entry’ signs are used to prevent vehicles travelling the wrong way along the road, and sometimes road junctions are redesigned to make it difficult to turn against the flow of traffic. For traffic travelling in the correct direction, arrow signs are used to show it is a one way street. The advantages of one way streets are:</p><ul id="fd74d551-a3d2-4f9a-8b1c-be7c7604875f" class="bulleted-list"><li>Can prevent vehicles using the road as a short cut / rat run</li></ul><ul id="53566db9-4115-4f96-8e7f-a5680e2d4469" class="bulleted-list"><li>Can create more road space for car and cycle parking</li></ul><ul id="0f744fad-1230-413d-8c6e-c5c8223c13e0" class="bulleted-list"><li>Can help traffic to move more freely</li></ul><h3 id="6f21a5de-f5ce-4e98-9e7a-b1164ba37936" class="">Tidal - flow operations</h3><p id="179c38d1-c3b0-45ef-8bc6-3ffef7249553" class="">Tidal flow operation is a traffic management process whereby the carriageway width is shared between the two directions of travel in near proportion to the flow in each direction. This paper presents information on the tidal flow systems in operation in England and the range of control equipment available.</p><h3 id="72ae1a3c-c7d6-4709-a0e8-d6d18361eb5a" class="">Exclusive Bus Lanes</h3><p id="bac01048-d78a-4285-9b54-e32c324ab29f" class="">A <strong>bus lane</strong> or <strong>bus-only lane</strong> is a <a href="https://en.wikipedia.org/wiki/Lane">lane</a> restricted to <a href="https://en.wikipedia.org/wiki/Bus">buses</a>, often on certain days and times, and generally used to speed up <a href="https://en.wikipedia.org/wiki/Public_transport">public transport</a> that would be otherwise held up by <a href="https://en.wikipedia.org/wiki/Traffic_congestion">traffic congestion</a>. Bus lanes are a key component of a high-quality <a href="https://en.wikipedia.org/wiki/Bus_rapid_transit">bus rapid transit</a> (BRT) network, improving bus travel speeds and reliability by reducing delay caused by other traffic. A dedicated bus lane may occupy only part of a roadway which also has lanes serving general automotive traffic; the related term <strong>bus-way</strong> describes a roadway completely dedicated for use by buses.</p><h1 id="a859f9f3-9e9a-4556-8c22-734f6e324c00" class="">Integrated Safety Development</h1><h3 id="94fa3e00-1c9e-4f29-8fa4-ba5480770f23" class="">Speed Violation Detection</h3><p id="a86acfd4-4903-4a0a-9a76-dee3b7bfd7ca" class="">Capture license plate of vehicles violating traffic rule:</p><ul id="b2047f82-c0e1-47f3-b498-e3096432f22a" class="bulleted-list"><li>Traffic light violation, </li></ul><ul id="97754380-257a-4c12-a91d-a30c2ab01ac4" class="bulleted-list"><li>Traffic signal monitoring and raise alarm if signal do not change after assigned time, </li></ul><ul id="0de8bc24-fc90-4121-b103-851b3ba88482" class="bulleted-list"><li>Vehicle stopping on road, </li></ul><ul id="60ceeafe-c510-46cb-9f6b-b247119ca681" class="bulleted-list"><li>Vehicle moving wrong way</li></ul><h3 id="49874e1b-7c67-4115-8fe7-cc051327e7fa" class="">Over Speed Monitoring </h3><ul id="628b72f4-446a-4685-9291-ca692c121011" class="bulleted-list"><li>Vehicle Over Speed Detection, violation detection with evidence </li></ul><ul id="fb9d61f1-a42f-4c2d-8578-2554185b97c1" class="bulleted-list"><li>Separate Speed Limits for 2 &amp; 4 wheelers, </li></ul><ul id="cef53d19-1197-4917-af52-bba853aacf37" class="bulleted-list"><li>Camera Based System </li></ul><ul id="f7852db7-2e2e-4cc5-aae0-5678f79cd10e" class="bulleted-list"><li>Camera+Radar Based System</li></ul><h3 id="bde4ed1d-9131-45e0-9353-c3d5fa5d73b3" class="">No-Helmet Monitoring</h3><ul id="bec6fa37-3f64-4810-99a2-6d2556c62840" class="bulleted-list"><li>Detection of No-Helmet ( Driver and Companion) </li></ul><ul id="095f721c-7a03-4041-8a89-f5aab9d671e4" class="bulleted-list"><li>Helmet Standard Training</li></ul><h3 id="a811400f-3560-43c3-b73d-1a5e8af765f8" class="">E-challan system</h3><ul id="8251652c-952f-478f-b8d3-1a0e8b1eb4d8" class="bulleted-list"><li>Generate challan for valid violation </li></ul><ul id="5708e4a4-2e4c-479e-b01e-1af1e18b3f15" class="bulleted-list"><li>Integration with RTO database </li></ul><ul id="93dbc9a0-48d5-4906-8c8d-7f43a90fbbcc" class="bulleted-list"><li>Auto email challan, </li></ul><ul id="97366b76-29f2-4a85-8666-3b6fe64ea785" class="bulleted-list"><li>Challan online payment portal, </li></ul><ul id="adaf59f1-a09c-450b-bb33-6eafd64ee3fb" class="bulleted-list"><li>Challan payment tracker</li></ul><h1 id="82855033-0a22-4b75-b745-295a9043cd7f" class="">Traffic Calming Schemes</h1><p id="4587ffa2-2e84-4b8f-a895-2ec01f6a7e88" class="">Traffic calming is the use of physical and regulatory measures to reduce vehicle speeds and acceleration. Its other aims are to alter driver behaviour and improve conditions for non-motorised street users. It focuses upon improving neighbourhood safety, comfort and liveability, whilst maintaining necessary levels of traffic circulation and emergency access. It encompasses a broad array of traffic engineering, education, and enforcement techniques to slow and disperse or re-route traffic.</p><p id="fa6794d2-5546-4329-ba84-0380063cff66" class="">Schemes:</p><ul id="c5e81b68-6ca3-4c64-a906-ee721c46ca5d" class="bulleted-list"><li>Volume control - Full Closures (dead ends), Half Closures (partial closures, one way closures) </li></ul><ul id="3a6b328a-3412-4981-a50f-fe3a145dffe3" class="bulleted-list"><li>Separation of directions - Median Barriers </li></ul><ul id="80b32259-0f35-4fa9-93bb-34bf22aa1758" class="bulleted-list"><li>Speed reducing measures - Speed Humps and Raised Pedestrian Crossing</li></ul></div></article></body></html>
